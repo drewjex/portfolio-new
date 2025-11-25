@@ -11,6 +11,19 @@ const Wrapper = styled.div`
 
     @media screen and (min-width: 1400px) {
         padding: 0 11em; //only on wide screens
+        max-width:1800px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding: 0 11em;
+        max-width:1800px;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 700px) {
+        padding: 0 3em;
+        max-width:1800px;
+        flex-direction: column;
     }
 
     p {
@@ -28,8 +41,15 @@ const Wrapper = styled.div`
 const NavSection = styled.div`
     flex: 3;
     padding: 4em;
-    // display: flex;
-    // flex-direction: column;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+
+    @media screen and (max-width: 1000px) {
+        position: relative;
+        padding: 0;
+        padding-top: 4em;
+    }
 
     h2 {
         margin-top:5px;
@@ -42,6 +62,15 @@ const NavLinks = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 5em;
+
+    @media screen and (max-width: 1000px) {
+        margin-top: 0;
+    }
+
+     @media screen and (max-width: 500px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 `
 
 const NavLink = styled.div`
@@ -90,6 +119,12 @@ const BodySection = styled.div`
     flex: 7;
     padding: 4em;
     padding-top:5.9em;
+
+    @media screen and (max-width: 1000px) {
+        position: relative;
+        padding: 0;
+        padding-top: 5em;
+    }
 `
 
 const SubHeader = styled.span`
@@ -107,7 +142,7 @@ const SubHeader = styled.span`
 `
 
 const ContentSection = styled.div`
-scroll-margin-top: 50px;
+    scroll-margin-top: 50px;
     border-left: 1px solid #c5df57;
     position: relative;
     //padding: 1em;
@@ -163,6 +198,10 @@ const RoleContainer = styled.div`
         margin-top: 1em;  
     }
 
+     @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
+
     &:hover {
         //border-color: rgba(226,232,240,.3);
         border-top: 1px solid rgba(226,232,240,.15);
@@ -190,6 +229,11 @@ const RoleContainer = styled.div`
         display: flex;
         list-style-type: none;
         padding-left: 0;
+
+        @media screen and (max-width: 1000px) {
+            display:flex;
+            flex-wrap: wrap;
+        }
 
         li {
             border-radius:.25em;
@@ -223,12 +267,22 @@ const RoleDetails = styled.div`
 `   
 
 const IconsContainer = styled.div`
-    position: fixed;
-    bottom: 4em;
-    left: 4em;
+    // @media screen and (max-width: 1000px) {
+    //     padding: 0 11em; //only on wide screens
+    //     max-width:1800px;
+    // }
 
-    @media screen and (min-width: 1400px) {
-        left: 15em; //only on wide screens
+    // @media screen and (min-width: 1400px) {
+    //     padding: 0 11em; //only on wide screens
+    //     max-width:1800px;
+    // }
+
+    bottom:5em;
+    position:absolute;
+
+    @media screen and (max-width: 1000px) {
+        position:relative;
+        bottom:0;
     }
 
     svg:hover {

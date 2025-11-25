@@ -2,6 +2,7 @@ body {
   margin: 0;
   width:100%;
   height:100%;
+  background-color: #1b1c1e;
 }
 
 * {
@@ -11,4 +12,6 @@ body {
 
 #root {
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
